@@ -1,0 +1,206 @@
+{
+  "quality": {
+    "rows": 3810,
+    "columns": 8,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "class_counts": {
+      "Osmancik": 2180,
+      "Cammeo": 1630
+    },
+    "iqr_outliers_per_feature": {
+      "Area": 4,
+      "Perimeter": 0,
+      "Major_Axis_Length": 0,
+      "Minor_Axis_Length": 65,
+      "Eccentricity": 21,
+      "Convex_Area": 3,
+      "Extent": 0
+    }
+  },
+  "split": {
+    "train": 3048,
+    "test": 762,
+    "seed": 42,
+    "cv_folds": 5
+  },
+  "best_params": {
+    "decision_tree": {
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "min_samples_split": 2
+    },
+    "knn": {
+      "metric": "euclidean",
+      "n_neighbors": 25,
+      "weights": "uniform"
+    }
+  },
+  "grid_sizes": {
+    "decision_tree": 448,
+    "knn": 64
+  },
+  "grid_cv_accuracy": {
+    "decision_tree": 0.9307696034886537,
+    "knn": 0.9307717569786534
+  },
+  "results": [
+    {
+      "Model": "Majority Class (Dummy)",
+      "Accuracy": 0.5722,
+      "Precision": 0.2861,
+      "Recall": 0.5,
+      "F1-Score": 0.3639,
+      "ROC-AUC": 0.5,
+      "CV Accuracy (mean)": 0.5722,
+      "CV Accuracy (std)": 0.0005
+    },
+    {
+      "Model": "Decision Tree (Baseline)",
+      "Accuracy": 0.8976,
+      "Precision": 0.896,
+      "Recall": 0.8947,
+      "F1-Score": 0.8953,
+      "ROC-AUC": 0.8947,
+      "CV Accuracy (mean)": 0.8868,
+      "CV Accuracy (std)": 0.0089
+    },
+    {
+      "Model": "KNN (Baseline)",
+      "Accuracy": 0.9094,
+      "Precision": 0.9089,
+      "Recall": 0.9058,
+      "F1-Score": 0.9072,
+      "ROC-AUC": 0.949,
+      "CV Accuracy (mean)": 0.9265,
+      "CV Accuracy (std)": 0.0066
+    },
+    {
+      "Model": "Decision Tree (Tuned)",
+      "Accuracy": 0.9186,
+      "Precision": 0.9181,
+      "Recall": 0.9154,
+      "F1-Score": 0.9166,
+      "ROC-AUC": 0.9715,
+      "CV Accuracy (mean)": 0.9308,
+      "CV Accuracy (std)": 0.0125
+    },
+    {
+      "Model": "KNN (Tuned)",
+      "Accuracy": 0.9094,
+      "Precision": 0.9096,
+      "Recall": 0.905,
+      "F1-Score": 0.907,
+      "ROC-AUC": 0.9699,
+      "CV Accuracy (mean)": 0.9308,
+      "CV Accuracy (std)": 0.0093
+    }
+  ],
+  "confusion_matrices": {
+    "Majority Class (Dummy)": [
+      [
+        0,
+        326
+      ],
+      [
+        0,
+        436
+      ]
+    ],
+    "Decision Tree (Baseline)": [
+      [
+        285,
+        41
+      ],
+      [
+        37,
+        399
+      ]
+    ],
+    "KNN (Baseline)": [
+      [
+        287,
+        39
+      ],
+      [
+        30,
+        406
+      ]
+    ],
+    "Decision Tree (Tuned)": [
+      [
+        291,
+        35
+      ],
+      [
+        27,
+        409
+      ]
+    ],
+    "KNN (Tuned)": [
+      [
+        285,
+        41
+      ],
+      [
+        28,
+        408
+      ]
+    ]
+  },
+  "feature_importance": {
+    "Major_Axis_Length": 0.9613,
+    "Perimeter": 0.0307,
+    "Extent": 0.0057,
+    "Area": 0.0021,
+    "Eccentricity": 0.0003,
+    "Convex_Area": 0.0,
+    "Minor_Axis_Length": 0.0
+  },
+  "feature_stats": {
+    "Area": {
+      "min": 7551.0,
+      "max": 18913.0,
+      "median_cammeo": 14212.0,
+      "median_osmancik": 11552.5
+    },
+    "Perimeter": {
+      "min": 359.1000061,
+      "max": 548.4459839,
+      "median_cammeo": 488.17950440000004,
+      "median_osmancik": 429.23950195
+    },
+    "Major_Axis_Length": {
+      "min": 145.2644653,
+      "max": 239.010498,
+      "median_cammeo": 205.71674345000002,
+      "median_osmancik": 175.66539
+    },
+    "Minor_Axis_Length": {
+      "min": 59.53240585,
+      "max": 107.54245,
+      "median_cammeo": 88.83087921,
+      "median_osmancik": 84.63354874000001
+    },
+    "Eccentricity": {
+      "min": 0.777232587,
+      "max": 0.948006928,
+      "median_cammeo": 0.9017592075,
+      "median_osmancik": 0.876205951
+    },
+    "Convex_Area": {
+      "min": 7723.0,
+      "max": 19099.0,
+      "median_cammeo": 14536.5,
+      "median_osmancik": 11813.5
+    },
+    "Extent": {
+      "min": 0.49741286,
+      "max": 0.861049533,
+      "median_cammeo": 0.6344360415,
+      "median_osmancik": 0.652695209
+    }
+  }
+}

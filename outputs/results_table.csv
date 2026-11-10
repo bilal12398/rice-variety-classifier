@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1-Score,ROC-AUC,CV Accuracy (mean),CV Accuracy (std)
+Majority Class (Dummy),0.5722,0.2861,0.5,0.3639,0.5,0.5722,0.0005
+Decision Tree (Baseline),0.8976,0.896,0.8947,0.8953,0.8947,0.8868,0.0089
+KNN (Baseline),0.9094,0.9089,0.9058,0.9072,0.949,0.9265,0.0066
+Decision Tree (Tuned),0.9186,0.9181,0.9154,0.9166,0.9715,0.9308,0.0125
+KNN (Tuned),0.9094,0.9096,0.905,0.907,0.9699,0.9308,0.0093
